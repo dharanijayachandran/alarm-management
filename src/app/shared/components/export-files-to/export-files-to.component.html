@@ -1,0 +1,25 @@
+<ul class="navbar-nav ml-auto" ngbDropdown>
+    <li class="nav-item dropdown exportFileTo">
+        <a id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+            href="javascript:;" i18n-matTooltip="CSV Tooltip|Click to Download data as CSV@@clickToDownloadDataAsCSV"
+            matTooltip="Click to Download data as" class="btn btn-xs btn-icon btn-circle btn-green dropdown-toggle" ngbDropdownToggle>
+            <i class="fa fa-download" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right animate slideIn" aria-labelledby="navbarDropdown" ngbDropdownMenu>
+            <a class="dropdown-item" href="javascript:;" (click)="downloadFile('excel')">
+                <i class="fa fa-file-excel-o" aria-hidden="true"></i>
+                Excel
+            </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="javascript:;" (click)="downloadFile('pdf')">
+                <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                PDF
+            </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="javascript:;" (click)="downloadFile('csv')">
+                <i class="fas fa-file-csv"></i>
+                CSV
+            </a>
+        </div>
+    </li>
+</ul>

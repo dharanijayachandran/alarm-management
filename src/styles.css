@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/angular2-multiselect-dropdown/themes/default.theme.css";
+@import '../node_modules/global/assets/css/customStyleSheet/global-style-sheet.css';
+@import '../node_modules/font-awesome/css/font-awesome.min.css';
+
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-angular-dropdowns/styles/material.css';
+
+.mat-mdc-option {
+  min-height: 36px !important;
+  font-size: 12px;
+}
+.mat-mdc-select-panel-above .mdc-menu-surface.mat-mdc-select-panel {
+  border-radius: 6px;
+}

@@ -1,0 +1,99 @@
+<!-- Click to alarm view starts here -->
+
+<div class="row margin_0px rowBox">
+    <div class="col-md-12 padding_0px">
+        <div class="padding_Form">
+            <div class="formReadMode">
+                <div class="form-group-custom1">
+                    <legend i18n="Page header|Alarm Details@@alarmDetails" class="m-b-15">Alarm Details</legend>
+                    <div class="form-row">
+                        <div class="form-group col-sm-6 col-md-4">
+                            <label i18n="Alarm Entity|Alarm Entity@@alarmEntity" class="">Alarm Entity</label>
+                            <p>
+                                {{alarm.entityName | hyphen}}
+                            </p>
+                        </div>
+                        <div class="form-group col-sm-6 col-md-4">
+                            <label i18n="Source|Source@@source" class="">Source</label>
+                            <p>
+                                {{alarm.entityTypeName | hyphen}}
+                            </p>
+                        </div>
+                        <div class="form-group col-sm-6 col-md-4">
+                            <label i18n="Type|Type@@type" class="">Type</label>
+                            <p>
+                                {{alarm.typeName | hyphen}}
+                            </p>
+                        </div>
+
+                        <div class="form-group col-sm-6 col-md-4">
+                            <label i18n="Severity|Severity@@severity" class="">Severity</label>
+                            <p>
+                                {{alarm.severityName | hyphen}}
+                            </p>
+                        </div>
+                        <div class="form-group col-sm-6 col-md-4">
+                            <label i18n="Message|Message@@message" class="">Message</label>
+                            <p>
+                                {{alarm.alarmMessage | hyphen}}
+                            </p>
+                        </div>
+
+                        <div class="form-group col-sm-6 col-md-4">
+                            <label i18n="Raised At|Raised At@@raisedAt" class="">Raised At</label>
+                            <p>
+                                {{alarm.dateTime | hyphen}}
+                            </p>
+                        </div>
+
+                        <div class="form-group col-sm-6 col-md-4">
+                            <label i18n="Current State|Current State@@currentState" class="">Current State</label>
+                            <p>
+                                {{alarm.stateName | hyphen}}
+                            </p>
+                        </div>
+                        <div class="form-group col-sm-12 col-md-12">
+                            <label i18n="Action(s)|Action(s)@@actions" class="">Action(s)</label>
+
+                            <table class="table table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Action</th>
+                                        <th> Action By</th>
+                                        <th>Time</th>
+                                        <th>Remark</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let alarmEvent of alarmEvents">
+                                        <td>
+                                            {{alarmEvent.stateName | hyphen}}
+                                        </td>
+                                        <td>
+                                            {{alarmEvent.eventUserName | hyphen}}
+                                        </td>
+                                        <td>
+                                            {{alarmEvent.eventDateTime | hyphen}}
+                                        </td>
+                                        <td>
+                                            {{alarmEvent.remark | hyphen}}
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="path finalLine"></div>
+                    <div class="row" style="    text-align: right;padding: 23px 0;">
+                        <div class="col-md-12">
+                            <button type="button" class="btn btn-default text-center backActionButton"
+                                (click)="backButton()" i18n="Back button|Back@@back"> Back
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Click to alarm view ends here -->

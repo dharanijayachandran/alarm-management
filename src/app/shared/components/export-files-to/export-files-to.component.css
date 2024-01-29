@@ -1,0 +1,3 @@
+.exportFileTo a.dropdown-toggle:after{
+    display: none;
+}
